@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- 点击 数据绑定
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script src="../js/angularjs.js" type="text/javascript"></script>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div ng-app="">
+            ng-model数据来源 ng-bind数据绑定
+            <input ng-model="a" value="" />
+            <div ng-bind="a"></div>
+
+            <div style="height: 30px ;">{{a}}</div>
+
+            <hr>
+
+            ng-show是否显示  ng-click点击事件
+            <input type="button" name="name" value="按钮" ng-click="b = !b">
+            <div ng-show="b" style="width: 200px; height: 200px;background: #ccc;"></div>
+            <hr>
+
+
+            ng-init 初始化数据
+            <div ng-init="aa = 0;bb = 0;">
+                <input ng-model="aa" value="" /> <input ng-model="bb" value="" />
+
+                <div style="height: 30px ;">{{aa * bb}}</div>
+
+            </div>
+
+
+            <hr>
+            ng-repeat循环数组
+            <input type="text" name="name" ng-model="c">
+            <input type="button" name="name" ng-click="arr.push(c)" value="添加">
+            <div ng-init="arr = [12, 56, 45, 44]">
+                
+                <ul>
+                    <li ng-repeat="item in arr">循环{{item}}</li>
+                </ul>
+
+            </div>
+            
+            
+            
+              <hr>
+            ng-repeat循环json
+       
+            <div ng-init="arr2 = [{name:'李四',age:45},{name:'王五',age:51},{name:'小张',age:36},{name:'赵六',age:47}]">
+                
+                <ul>
+                    <li ng-repeat="item in arr2">循环json 名字：{{item.name}} 年龄{{item.age}}</li>
+                </ul>
+
+            </div>
+
+        </div> 
+
+
+
+    </body>
+</html>
